@@ -1,0 +1,17 @@
+.contact-section {
+  height: 100vh;
+  background: linear-gradient(to right, #f8f9fa, #e9f5e9);
+}
+
+.animated-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
