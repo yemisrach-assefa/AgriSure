@@ -1,1 +1,1 @@
-ongoing progect
+ongoing project
