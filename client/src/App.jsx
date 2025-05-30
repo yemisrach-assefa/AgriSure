@@ -10,14 +10,14 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Contact from './components/Contact';
 import OurWork from './components/Ourwork';
-import Userregistration from './Pages/Userregistration'
-// import Register from './pages/Register';
+import Userregistration from './Pages/Userregistration';
+import Login from './Pages/Userlogin'; // Optional
 
-// // Private Components
-// import Sidebar from './components/Sidebar';
-// import Dashboard from './pages/Dashboard';
-// import FarmMapping from './pages/FarmMapping';
-// import Insights from './pages/Insights';
+// Private Components
+import Sidebar from './components/Sidebar';
+import Dashboard from './Pages/Dashboard'; // Make sure this exists
+import FarmMapping from './Pages/FarmMapping'; // Optional
+import Insights from './Pages/Insights'; // Optional
 
 // Layout Wrapper for Protected Pages
 const ProtectedLayout = ({ children }) => (
@@ -31,7 +31,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* 🌐 Public Routes */}
+        {/* 🌐 Public Home Route */}
         <Route
           path="/"
           element={
@@ -39,22 +39,18 @@ function App() {
               <Navbar />
               <Hero />
               <About />
-              <OurWork/>
+              <OurWork />
               <Contact />
               <Footer />
             </>
           }
         />
-        <Routes>
- 
-  <Route path="/login" element={<Login />} />
-  <Route path="/dashboard" element={<Dashboard />} />
-  {/* other routes */}
-</Routes>
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} /> */}
 
-        {/* 🔐 Protected Routes
+        {/* 🌐 Public Auth Routes */}
+        <Route path="/registeration" element={<Userregistration />} />
+        <Route path="/login" element={<Login />} />
+
+        {/* 🔐 Protected Routes */}
         <Route
           path="/dashboard"
           element={
@@ -78,7 +74,7 @@ function App() {
               <Insights />
             </ProtectedLayout>
           }
-        /> */}
+        />
       </Routes>
     </Router>
   );

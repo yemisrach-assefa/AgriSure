@@ -9,8 +9,8 @@ const Sidebar = () => {
     <div className="sidebar bg-light p-3" style={{ minHeight: '100vh' }}>
       <h4 className="mb-4">AgriSure</h4>
       <Nav defaultActiveKey="/" className="flex-column">
-        <Nav.Link as={Link} to="/">Dashboard</Nav.Link>
-        <Nav.Link as={Link} to="/Register">Register</Nav.Link>
+        <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+        <Nav.Link as={Link} to="/FarmMapping">FarmMapping</Nav.Link>
         <Nav.Link as={Link} to="/cropsuggestion">CropSuggestion</Nav.Link>
         <Nav.Link as={Link} to="/insights"> Weather Insights</Nav.Link>
         <Nav.Link as={Link} to="/package">Insurance Packages</Nav.Link>
